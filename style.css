@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-color: #e1e1e6;
+
+  --primary-color: hsla(195, 89%, 14%, 1);
+  --secundary-color: hsl(195, 61%, 6%);
+  --3color: hsla(191, 31%, 42%, 1);
+  --btn-color: hsla(195, 91%, 25%, 1);
+  --link-remove: hsla(355, 91%, 66%, 1);
+}
+body {
+  font-size: 1.6rem;
+  background: #000000;
+}
+body * {
+  font-family: var(--ff-primary);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+#app {
+  width: 800px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5.5rem auto 3.5rem;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3rem;
+  text-transform: uppercase;
+  gap: 1rem;
+  color: #e1e1e6;
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search input {
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--secundary-color);
+  width: 300px;
+  color: var(--ff-color);
+}
+.search button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--btn-color);
+  color: white;
+  cursor: pointer;
+}
+.search button:hover {
+  background-color: white;
+  color: var(--btn-color);
+}
+.search button:hover path {
+  fill: var(--btn-color);
+}
+
+table {
+  width: 100%;
+  padding: 2.3rem 3rem;
+  border-collapse: collapse;
+  border-radius: 10px;
+}
+table * {
+  font-size: 1.4rem;
+  color: var(--ff-color);
+}
+
+table th {
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+  background: #092d38;
+  text-align: left;
+  font-weight: 700;
+  font-family: var(--ff-primary);
+}
+
+table td {
+  text-align: left;
+  padding: 1rem 2.8rem 1rem 2.8rem;
+}
+
+table tr:nth-child(odd) {
+  background: #030b0d;
+}
+table tr:nth-child(even) {
+  background: #06181c;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  background: none;
+  border: none;
+  color: var(--link-remove);
+  cursor: pointer;
+}
+td.repositories {
+  padding-left: 4rem;
+}
+
+td.followers {
+  padding-left: 4rem;
+}
+.btnRemove {
+  padding-left: 4rem;
+}
+
+.starWait {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 490px;
+  background-color: var(--secundary-color);
+ 
+  border-top: none;
+  gap: 25px;
+}
+.starWait img {
+  width: 150px;
+}
+.starWait span {
+  color: #4e5455;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24.781px;
+}
+.table-wrapper {
+  max-height: 540px; 
+  border: 1px solid #4a808c;
+  border-radius: 10px 10px 10px 10px;
+  overflow: auto;
+}
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4A808C; 
+  border-radius: 5px;
+}
+.hide {
+  display: none;
+}
